@@ -1,0 +1,317 @@
+@import url('https://fonts.cdnfonts.com/css/minecraftia');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Minecraftia', sans-serif;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#gameover-screen {
+    font-family: 'Minecraftia', sans-serif;
+    display: none; 
+    position: absolute; 
+    width:90dvw; 
+    max-width: 600px;
+    height:90dvh; 
+    border-radius: 0.5rem;
+    z-index:100;
+    background:rgba(0,0,0,0.85);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    justify-content:center; 
+    align-items:center; 
+    flex-direction:column;
+    cursor: pointer;
+}
+.game-cont {
+    border-radius: 0.5rem;
+    display: flex;
+    position: relative;
+    height: 90dvh;
+    width: 90dvw;
+    max-width: 600px;
+    background-image: url(Imgs/fundo.png);
+    overflow: hidden;
+}
+#arvore {
+    position: absolute;
+    background-image: url(Imgs/arvore.png);
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    height: 13rem;
+    width: 9rem;
+    bottom: 50%;
+    left: 1rem;
+}
+#arvore3 {
+    position: absolute;
+    background-image: url(Imgs/arvore.png);
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    height: 10rem;
+    width: 9rem;
+    bottom: 51%;
+    right: 1rem;
+}
+#arvore2 {
+    position: absolute;
+    background-image: url(Imgs/arvore.png);
+    background-position: center;
+    background-size: 12rem 8rem;
+    background-repeat: no-repeat;
+    z-index: 0;
+    height: 8rem;
+    width: 15rem;
+    bottom: 51%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#score {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 2.5rem;
+    width: 100%;
+    font-size: 1rem;
+}
+.vid {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+}
+#hh1{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+#hh2{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+#hh3{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+#fome {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 0.5rem;
+}
+.vid, #pont {
+    color: #fff;
+}
+
+#plat, #plat2, #plat3 {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 1rem;
+}
+
+#plat {
+    bottom: 0;
+    z-index: 2;
+    height: 54%;
+    background-image: url(Imgs/chao.png);
+    background-position: top;
+    background-size: 20rem 10rem;
+}
+
+#plat2 {
+    box-shadow: 1rem 0 5rem black;
+    bottom: 0;
+    z-index: 3;
+    height: 38%;
+    background-image: url(Imgs/chao.png);
+    background-position: top;
+    background-size: 30rem 10rem;
+}
+
+#plat3 {
+    box-shadow: 1rem 0 5rem black;
+    bottom: 0;
+    z-index: 4;
+    height: 21%;
+    background-image: url(Imgs/chao.png);
+    background-position: top;
+    background-size: 39rem 10rem;
+}
+
+#player {
+    position: absolute;
+    background-image: url(Imgs/steve.png);
+    background-position: center;
+    background-size: 3rem 4rem;
+    z-index: 10;
+    border-radius: 0.3rem;
+    height: 4rem;
+    width: 2.5rem;
+    background-color: transparent;
+    bottom: 47%;
+    left: auto;
+    transition: bottom 0.2s ease-in-out, top 0.2s ease-in-out;
+    transition: background-image 0.2s all;
+}
+#vaca{
+    position: absolute;
+    right: 3%;
+    background-image: url(Imgs/vaca.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 3rem 3rem;
+    z-index: 9;
+    border-radius: 0.3rem;
+    height: 4rem;
+    width: 3.5rem;
+    background-color: transparent;
+    bottom: 51%;
+    animation: vaca 200s linear infinite;
+    transition: none;
+}
+@keyframes vaca{
+    0% {
+        right: -10%;
+    }
+    12.5% {
+        right: 10%;
+    }
+    25% {
+        right: 30%;
+    }
+    50% {
+        right: 50%;
+    }
+    100% {
+        right: 110%;
+    }
+}
+#galinha{
+    position: absolute;
+    left: 3%;
+    background-image: url(Imgs/galinha.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.8rem 1.8rem;
+    z-index: 9;
+    border-radius: 0.3rem;
+    height: 3rem;
+    width: 2.5rem;
+    background-color: transparent;
+    bottom: 35.4%;
+    animation: galinha 170s linear infinite;
+    transition: none;
+}
+@keyframes galinha{
+    0% {
+        left: -10%;
+    }
+    12.5% {
+        left: 20%;
+    }
+    50% {
+        left: 50%;
+    }
+    74.5% {
+        left: 80%;
+    }
+    100% {
+        left: 110%;
+    }
+}
+#ovelha{
+    position: absolute;
+    left: 3%;
+    background-image: url(Imgs/ovelha.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2.5rem 2.5rem;
+    z-index: 9;
+    border-radius: 0.3rem;
+    height: 3.5rem;
+    width: 3rem;
+    background-color: transparent;
+    bottom: 18%;
+    animation: ovelha 120s linear infinite;
+    transition: none;
+}
+@keyframes ovelha{
+    0% {
+        left: -10%;
+    }
+    12.5% {
+        left: 20%;
+    }
+    50% {
+        left: 50%;
+    }
+    74.5% {
+        left: 80%;
+    }
+    100% {
+        left: 110%;
+    }
+}
+.inimigo {
+  z-index: 100;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 30%;
+  width: 5%;
+  height: 5%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+#dica-controles {
+    cursor: help;
+    display: block;
+    z-index: 1000;
+    height: auto;
+    width: 20dvw;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 2dvw;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-family: 'Minecraftia', sans-serif;
+    font-size: 1rem;
+    padding: 1rem 1.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 480px) {
+    #score {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    #player {
+        height: 3.2rem;
+        width: 1.5rem;
+    }
+
+    #plat, #plat2, #plat3 {
+        width: 100%;
+        height: 0.8rem;
+    }
+
+}

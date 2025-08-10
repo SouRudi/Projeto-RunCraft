@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Título</title>
+</head>
+
+<body oncontextmenu="return false;">
+    
+    <section class="game-cont">
+        <div id="score">
+            <p class="vid">
+                <img id="hh1" src="Imgs/heart.png">
+                <img id="hh2" src="Imgs/heart.png">
+                <img id="hh3" src="Imgs/heart.png">
+            </p>
+            <p id="pont">
+                <img id="fome" src="Imgs/fome.png">
+                <span id="timer" style="margin-left:10px; color:#fff;">0s</span>
+            </p> 
+        </div>
+        <div id="player"></div>
+        
+        <div id="arvore"></div>
+        <div id="arvore2"></div>
+        <div id="arvore3"></div>
+
+
+        <div id="vaca"></div>
+        <div id="ovelha"></div>
+        <div id="galinha"></div>
+
+
+        <div id="plat"></div>
+        <div id="plat2"></div>
+        <div id="plat3"></div>
+    </section>
+
+    <div id="dica-controles" onclick="this.style.display='none';">
+        Controles: <br> Segure W para subir e S para descer <br>
+        Clique A para esquerda e D para direita <br><br>
+        (Clique para sumir❕)
+    </div>
+
+    <div id="gameover-screen">
+        <img style="max-width:300px; margin-bottom:30px;">
+        <h2 style="color:white;">Clique para reiniciar</h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
